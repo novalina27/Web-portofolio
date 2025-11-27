@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header dan Navigasi */
+header {
+    background: #034583;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #00c3ff;
+}
+
+/* Tata Letak Konten Utama */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.content-section {
+    padding: 40px 0;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #73adf0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.hero {
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+    display: flex; 
+    align-items: center;
+    text-align: left;
+    gap: 30px; 
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 5px solid #498dcc; 
+    flex-shrink: 0; 
+}
+.intro-text h1 {
+    margin-top: 0;
+    color: #4a65ff;
+}
+
+/* List Pendidikan dan Keahlian */
+.education-list, .skills-list {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+.education-list li, .skills-list li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid #417dff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #4e4e4e;
+    color: #fff;
+    margin-top: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ccc, rgba(0, 0, 0, 0));
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column; /* Ubah tata letak menjadi vertikal di layar kecil */
+        text-align: center;
+    }
+
+    .intro-text {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.social-links {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-links h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: #5a5a5a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 30%; 
+    min-width: 150px; 
+}
+
+.icon-link:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px); 
+}
+
+.icon {
+    font-size: 30px; 
+    margin-bottom: 5px;
+}
+
+.info {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.whatsapp .info { color: #000000; } /* Hijau WhatsApp */
+.instagram .info { color: rgb(243, 90, 115); }
+
+@media (max-width: 600px) {
+    /* Mengubah tata letak ikon menjadi kolom di layar kecil */
+    .contact-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .icon-link {
+        width: 100%;
+        margin-bottom: 10px;
+        flex-direction: row; /* Kembali ke baris */
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .icon {
+        margin-bottom: 0;
+    }
+}
